@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+   Project Part 1
+   
+   "2023 Video Games Catalog"
+   Author: Daniel Mairetta
+   Date:   03/10/2023
+   
+   Filename: index.html 
+   -->
+   <meta charset="utf-8" />
+   <title>Video Games Catalog</title>
+    <link rel="stylesheet" href="ProjectP1-css1float.css">
+    <link rel="stylesheet" href="ProjectP1-css2.css">
+	<script defer src="clock.js"></script>
+</head>
+<body>
+   <header>
+     <div> 
+	  <img src="game.png" alt="Video Games Catalog" width="50" height="50" />
+<h1>Video Game Catalog</h1>     
+</div>
+	 <nav class="horizontal">
+        <ul>
+            <li><a href="index.html"><img src="home.png" alt="home" width="15" height="15">Home</a></li>
+            <li><a href="puzzlegames.html">Puzzle Games</a></li>       
+            <li><a href="adventuregames.html">Action-Adventure Games</a></li>
+			<li><a href="indiegames.html">Indie Games</a></li>
+            <li><a href="personalrec.html">Personal Reviews and Recomendations</a></li>
+         </ul>
+      </nav>
+   </header>
+</body>
+<!-- Beginning of code for date and time in (mm/dd/yyyy) format and its live tick up) -->
+<h1>Current date and time:</h1>
+  <p id="datetime"></p>
+
+ <script type="text/javascript">
+		function displayTime() {
+			var currentDate = new Date();
+			var date = currentDate.toLocaleDateString();
+			var time = currentDate.toLocaleTimeString();
+			var day = currentDate.toLocaleString('default', { weekday: 'long' });
+
+			document.getElementById('clock').innerHTML = day + ' ' + date + ' ' + time;
+			setTimeout(displayTime, 1000);
+		}
+	</script>
+</head>
+<body onload="displayTime()">
+	<p id="clock"></p>
+	
+  <article>
+   <h2>Home</h2><img src="home.png" alt="home" width="125" height="125">
+	<img-wrap><p>This website is here to introduce a newcomer to videogames and 
+	videogame genres. Games are a past time that anyone at any age and 
+	any personality can enjoy.</p>
+	<p>This website will list 3 different genres and it will also have a Personal Recommendation Section. 
+	The game genres are:</p>
+	<ul>
+		<li>Puzzle Games</li>
+		<li>Action-Adventure Games</li>
+		<li>Indie games</li>
+	</ul>
+	<p1>There will also be a Personal Recommendation Catalog.</p1> 
+	<p1>Each section will give a description of the game type and then list 5 games and 
+	their release dates, an average rating, and a summary.</p1>
+	<p1>The Personal Recommendation section will feature the same format 
+	of the other sections however it may feature genres not mentioned 
+	on the website.</p1></img-wrap>
+	
+<!-- Beginning of fieldset for input boxes, range slider, sumbmission button, and date entry. -->
+
+<fieldset>
+<label for="cname">Name for Feedback</label>
+         <input id="fname" name="feedbackname" type="text" required />
+<label for="month">Submission Month</label>
+         <select name="submonth" id="month" required>
+            <option value="">Month</option>
+            <option value="01">January (01)</option>
+            <option value="02">February (02)</option>
+            <option value="03">March (03)</option>
+            <option value="04">April (04)</option>
+            <option value="05">May (05)</option>
+            <option value="06">June (06)</option>
+            <option value="07">July (07)</option>
+            <option value="08">August (08)</option>
+            <option value="09">September (09)</option>
+            <option value="10">October (10)</option>
+            <option value="11">November (11)</option>
+            <option value="12">December (12)</option>
+         </select>  
+         
+         <label for="year">Submission Year</label>
+         <select name="subyear" id="year" required>
+            <option value="">Year</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+         </select>
+		 
+	<p>How many videogames have you played in the last year?</p>
+            <ol type="a">
+               <li>
+                  <input type="radio" id="q1a" name="q1" value="<5">
+                  <label for="q1a"><5</label>
+               </li>
+               <li>
+                  <input type="radio" id="q1b" name="q1" value="<10">
+                  <label for="q1b"><10</label>
+               </li>
+               <li>
+                  <input type="radio" id="q1c" name="q1" value="<15">
+                  <label for="q1c"><15</label>
+               </li>
+               <li>
+                  <input type="radio" id="q1d" name="q1" value=">15">
+                  <label for="q1d">>15</label>
+               </li>
+	<br>
+	</br>
+	
+  <p>Rate your experience with games:<p>
+  <div id="newRow">
+    <label for="q4">1</label>
+    <input type="range" id="q4" name="q4" min="1" max="10" value="5">
+    <label for="q4">10</label>
+  </div>
+<br>
+</br>
+         
+   <label for="q5text"><p>Provide any suggestions for videogame recomendations:</p></label>
+   <textarea id="q5text" name="q5" placeholder="Enter your suggestions here"></textarea>
+<br>
+</br>
+ <input type="submit" value="Submit" />
+</fieldset>
+<!-- End of fieldset -->
+      
+	  <h2>Other Game Ranking Website Lists</h2>
+      <nav>
+	  <ul>
+         <li><a href="https://www.thegamer.com/steam-puzzle-games-best-most-addictive/?newsletter_popup=1#human-fall-flat">Best Puzzle Games</a></li>
+         <li><a href="https://www.thegamer.com/best-action-adventure-games-ranked/#death-stranding">Best Action Adventure Games</a></li>
+         <li><a href="https://indiegameculture.com/best-indie-games/">Best Indie Games</a></li>
+      </ul>
+   </nav>
+</body>
+   </article>
